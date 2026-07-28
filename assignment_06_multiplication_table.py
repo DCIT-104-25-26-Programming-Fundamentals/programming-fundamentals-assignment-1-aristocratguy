@@ -50,6 +50,53 @@
 # - Complete Part A before attempting Part B.
 #
 
+# =============================================================================
+# PROGRAMMING FUNDAMENTALS — Assignment 6
+# Topic: Loops and Functions
+# Task: Multiplication Table Generator
+# =============================================================================
+
+# -----------------------------
+# Part A - Single Table
+# -----------------------------
+def single_table():
+    try:
+        number = int(input("Enter a number: "))
+    except ValueError:
+        print("Error: Please enter a valid integer.")
+        return
+
+    print(f"\nMultiplication Table for {number}:")
+    for i in range(1, 13):
+        print(f"{number} x {i} = {number * i}")
+
+
+# -----------------------------
+# Part B - Tables from 1 to N
+# -----------------------------
+def tables_to_n():
+    try:
+        n = int(input("\nEnter a positive integer (N): "))
+    except ValueError:
+        print("Error: Please enter a valid integer.")
+        return
+
+    if n <= 0:
+        print("Error: N must be a positive integer.")
+        return
+
+    for num in range(1, n + 1):
+        print(f"\nMultiplication Table for {num}:")
+        for i in range(1, 13):
+            print(f"{num} x {i} = {num * i}")
+        print("-" * 30)
+
+
+# -----------------------------
+# Main Program
+# -----------------------------
+single_table()
+tables_to_n()
 #
 # =============================================================================
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
